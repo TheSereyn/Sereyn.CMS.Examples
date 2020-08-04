@@ -1,0 +1,27 @@
+﻿@page "/"
+@page "/Category/{Category}"
+
+<Featured />
+
+<main class="container">
+    <h3>Recent @Category Posts</h3>
+
+    @if (_articles.Count != 0)
+    {
+        foreach (var item in _articles)
+        {
+            <hr class="my-3" />
+
+            <article>
+                <header>
+                    <h2><a href="/Article/@item.Route" class="link-dark text-decoration-none">@item.Title</a></h2>
+                    <p class="text-muted">Created on @item.Created.ToString("MMMM d, yyyy")</p>
+                </header>
+
+                @item.Lede
+
+            </article>
+        }
+    }
+
+</main>

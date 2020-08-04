@@ -1,0 +1,34 @@
+﻿<header class="container">
+    <div class="d-flex justify-content-center border-bottom w-100 py-3">
+        <h1><a href="/" class="link-dark text-decoration-none">Blog Title</a></h1>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 w-100 d-flex justify-content-between">
+                    @if (_navItems.Items.Count != 0)
+                    {
+                        foreach (var item in _navItems.Items)
+                        {
+                            if (item.Active)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="@item.Route">@item.Name</a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" href="@item.Route">@item.Name</a>
+                                </li>
+                            }
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

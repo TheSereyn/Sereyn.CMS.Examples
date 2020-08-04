@@ -1,15 +1,11 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="sidebar">
-    <NavMenu />
-</div>
+<Header />
 
-<div class="main">
-    <div class="top-row px-4">
-        <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
-    </div>
+@Body
 
-    <div class="content px-4">
-        @Body
+<footer class="container-fluid bg-light mt-5 border-top">
+    <div class="container w-100 d-flex justify-content-center py-4">
+        <p>Created with Sereyn CMS</p>
     </div>
-</div>
+</footer>

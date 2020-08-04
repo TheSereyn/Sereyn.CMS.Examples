@@ -18,6 +18,7 @@ namespace Sereyn.CMS.Examples.Blog
             builder.RootComponents.Add<App>("app");
 
             builder.Services.AddTransient(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+            builder.Services.AddSereynCMS();
 
             await builder.Build().RunAsync();
         }
