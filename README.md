@@ -4,8 +4,12 @@ Presently I have created a single blog style template that uses Sereyn CMS 0.1.0
 
 Sereyn CMS is still very early in development, it's possible the current implementation could change a fair bit before I delare a version 1.0.0. More details can be found on the Sereyn CMS repo. 
 
-# Running in a development environment
+## Running in a development environment
 
-Two quick points to keep in mind when running this project on a local machine:
- - Content and Catalogue folders will need moving into the wwwroot folder. 
- - It's possible you may need to update the base URL Sereyn CMS uses in the appsettings.json file. 
+The only configuration needed for the app is to update the base URL that is used by Sereyn CMS in the appsettings.json file in the wwwroot folder.  
+
+## Live Example
+
+You can find a copy of the blog example at the following link. 
+
+https://sereynblogexample.z16.web.core.windows.net/
